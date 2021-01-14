@@ -231,7 +231,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   begin: 5
   spawnintervals: 2.5
-  Obstacle: {fileID: 1908362523608080097, guid: b36ed69fb9c357145a9609770c0a3c36,
+  Obstacle1: {fileID: 1908362523608080097, guid: b36ed69fb9c357145a9609770c0a3c36,
+    type: 3}
+  Obstacle2: {fileID: 3601059408417249281, guid: 803afc6d8fb0b594b86774dbcc567edf,
     type: 3}
 --- !u!4 &458075665
 Transform:
