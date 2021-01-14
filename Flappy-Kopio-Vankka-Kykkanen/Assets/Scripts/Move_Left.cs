@@ -16,6 +16,11 @@ public class Move_Left : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector2.left * Speed * Time.deltaTime);
+        transform.Translate(Vector2.left * Speed * Time.deltaTime); // move left
+
+        if (transform.position.x < -13)
+        {
+            Destroy(gameObject); // destroy gameobject when out of screen
+        }
     }
 }
