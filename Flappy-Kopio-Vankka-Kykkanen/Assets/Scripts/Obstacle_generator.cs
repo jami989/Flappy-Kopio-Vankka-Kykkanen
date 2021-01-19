@@ -29,8 +29,8 @@ public class Obstacle_generator : MonoBehaviour
         if (starttimer > begin && starttimer > timer)
         {
             position = Random.Range(1.75f, 6.5f);
-            Instantiate(Obstacle2, new Vector2(13, position), Quaternion.identity);
-            Instantiate(Obstacle1, new Vector2(13, position - 8.5f), Quaternion.identity);
+            Instantiate(Obstacle2, new Vector2(15, position), Quaternion.identity);
+            Instantiate(Obstacle1, new Vector2(15, position - 8.5f), Quaternion.identity);
 
             timer = Time.realtimeSinceStartup + spawnintervals;
         }
