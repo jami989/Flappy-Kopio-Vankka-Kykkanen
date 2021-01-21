@@ -9,6 +9,7 @@ public class Obstacle_generator : MonoBehaviour
 
     public GameObject Obstacle1;
     public GameObject Obstacle2;
+    public GameObject Goal;
 
     float position;
 
@@ -31,6 +32,7 @@ public class Obstacle_generator : MonoBehaviour
             position = Random.Range(1.75f, 6.5f);
             Instantiate(Obstacle2, new Vector2(15, position), Quaternion.identity);
             Instantiate(Obstacle1, new Vector2(15, position - 8.5f), Quaternion.identity);
+            Instantiate(Goal, new Vector2(15, position - 4), Quaternion.identity);
 
             timer = Time.realtimeSinceStartup + spawnintervals;
         }

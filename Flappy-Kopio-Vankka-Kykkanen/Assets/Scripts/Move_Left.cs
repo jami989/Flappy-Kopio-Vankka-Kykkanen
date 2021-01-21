@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class Move_Left : MonoBehaviour
 {
+    public GameObject gameManager;
+    public Gamemanager GM;
 
     public float Speed;
+    public int type;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameManager = GameObject.FindGameObjectWithTag("GameController");
+
+        GM = gameManager.GetComponent<Gamemanager>();
     }
 
     // Update is called once per frame
@@ -21,6 +26,14 @@ public class Move_Left : MonoBehaviour
         if (transform.position.x < -13)
         {
             Destroy(gameObject); // destroy gameobject when out of screen
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && gameObject.CompareTag("Finish"))
+        {
+            GM.Scored();
         }
     }
 }
