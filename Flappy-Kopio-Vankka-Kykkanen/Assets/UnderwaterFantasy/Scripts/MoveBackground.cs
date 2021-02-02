@@ -22,9 +22,9 @@ public class MoveBackground : MonoBehaviour
         transform.Translate(Vector2.left * Time.deltaTime * movementSpeed);
 
         if (transform.position.x < startPos.x - repeatWidth)
-          {
-            transform.position = startPos;
-          } 
+        {
+           transform.position = startPos;
+        } 
         
     }
 }

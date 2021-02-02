@@ -9,7 +9,7 @@ public class Gamemanager : MonoBehaviour
     public Text text2;
 
     private int Score = 0;
-    private int Hscore = 0;
+    private int Hscore;// = 0;
 
     // Start is called before the first frame update
     void Start()

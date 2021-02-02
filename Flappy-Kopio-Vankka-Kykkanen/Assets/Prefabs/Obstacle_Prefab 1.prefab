@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 5335367626389304888}
   m_Layer: 0
   m_Name: Obstacle_Prefab 1
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -126,7 +126,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2212284bf1bb2346ac1e1c366e47e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameManager: {fileID: 0}
+  GM: {fileID: 0}
   Speed: 2.5
+  type: 0
 --- !u!61 &9048882904891017708
 BoxCollider2D:
   m_ObjectHideFlags: 0
