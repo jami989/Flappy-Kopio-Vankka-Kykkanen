@@ -14,6 +14,9 @@ public class PlayerController : MonoBehaviour
     public Text scoreText;
     // public float yRange = 4;
 
+    public AudioClip jump;
+    public AudioClip hit;
+
     private Rigidbody2D rigidBody;
     private Animator playerAnim;
 
@@ -32,6 +35,7 @@ public class PlayerController : MonoBehaviour
         {
             //Jump
             isGameOver = false;
+            GetComponent<AudioSource>().PlayOneShot(jump);
             rigidBody.velocity = Vector2.up * speed;
             playerAnim.Play("PlayerJump");
         }
@@ -45,6 +49,7 @@ public class PlayerController : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("Obstacle"))
         {
+            GetComponent<AudioSource>().PlayOneShot(hit);
             isGameOver = true;
             playerAnim.Play("PlayerDeath");
             Debug.Log("Game Over");

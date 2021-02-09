@@ -33,6 +33,7 @@ public class Move_Left : MonoBehaviour
     {
         if (collision.CompareTag("Player") && gameObject.CompareTag("Finish"))
         {
+            GetComponent<AudioSource>().Play();
             GM.Scored();
         }
     }

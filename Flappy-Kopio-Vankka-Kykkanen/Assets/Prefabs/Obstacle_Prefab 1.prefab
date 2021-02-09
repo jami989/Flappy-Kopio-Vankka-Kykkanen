@@ -128,7 +128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameManager: {fileID: 0}
   GM: {fileID: 0}
-  Speed: 2.5
+  Speed: 3.5
   type: 0
 --- !u!61 &9048882904891017708
 BoxCollider2D:
