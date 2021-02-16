@@ -10,9 +10,6 @@ public class PlayerController : MonoBehaviour
     public bool isGameOver = false;
     public float speed = 1;
     private float animLength = 5.0f;
-    private Gamemanager gameManager;
-    public Text scoreText;
-    // public float yRange = 4;
 
     public AudioClip jump;
     public AudioClip hit;
@@ -25,7 +22,6 @@ public class PlayerController : MonoBehaviour
     {
         rigidBody = GetComponent<Rigidbody2D>();
         playerAnim = GetComponent<Animator>();
-        gameManager = GetComponent<Gamemanager>();
     }
 
     // Update is called once per frame
@@ -59,7 +55,6 @@ public class PlayerController : MonoBehaviour
         {
             yield return new WaitForSeconds(delay);
             SceneManager.LoadScene("GameOverScene");
-            gameManager.text1 = scoreText;
         }
     }
 }
